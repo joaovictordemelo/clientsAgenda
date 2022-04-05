@@ -23,9 +23,6 @@ p {
   text-align: center;
 }
 
-
-
-
 </style>
 
 	<link rel= "stylesheet" type = "tex/css" href="formclient.css">
@@ -57,8 +54,16 @@ p {
 	<br>
 
 	<button type="submit" name = "submit">Enter </button>
+	<br>
 
-</form>
+	</form>
+	<form style="text-align: center; " action = "agendaDisplay.php" method = "POST"> 
+	<button type="submit" name = "submit">My Agenda </button>
+	<br>
+	<button type="submit" name = "submit">Save </button>
+	<br>
+	</form>
+
 
 <?php
 	$sql = "INSERT INTO clients (id, name, email,job, market, phone, address) VALUES ('1', 'joao', 'joaovictordemelo@ufmg.br', 'student', 'universidade', '96861197', 'avenida das palmeiras');";
