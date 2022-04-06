@@ -2,31 +2,23 @@
 <html>
 
 	<head>
-		<style type="tex/css">
-			table{
+		
+		<style>
 
-				border-collapse: collapse;
-				width: 100%
-				color: #eb4034;
-				font-family: monospace;
-				fonte-size: 25px;
-				text-align: left;
-			}
+			table {
+  border-collapse: collapse;
+  width: 100%;
+  color:  #696969;
+}
 
-			th{
-				background-color: #eb4034;
-				color: white;
-			}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
 
-			tr: nth-child(even) {background-color: #ededed}
-
-
-		</style>
-
-	</head>
-
-<style>
-
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
 body {
   background-color: lightblue;
 }
@@ -41,6 +33,13 @@ p {
   text-align: center;
 
 }
+tr:hover {background-color: #778899;}
+
+
+       </style>
+	</head>
+
+
 <style type="tex/css">
 			table{
 
@@ -96,7 +95,8 @@ p {
 		?>
 
 	</table>
-
-
+		<form action="index.php">
+			<button  type="submit" name = "submit"> Go back</button>
+		</form>
    </body>
 </html> 
