@@ -13,6 +13,24 @@
 
 	<body>
 		<?php require_once 'process.php'; ?>
+
+
+		<?php
+
+		if(isset($_SESSION['message'])): ?>
+
+		<div class="alert alert-<?=$_SESSION['msg_type']?>">
+
+			<?php
+
+				echo $_SESSION['message'];
+				unset($_SESSION['message']);
+
+			?>
+
+		</div>
+		<?php endif ?>
+
 		<div class="container">
 
 		<?php 
@@ -47,7 +65,16 @@
 					<td><?php echo $row['name']; ?></td>
 					<tr><?php echo $row['email']; ?></td>
 
-					<td></td>
+					<td>
+						
+						<a href="edit.php?edit=<?php echo $row['id']; ?>"
+							class="btn btn-info">Edit</a>
+
+						<a href="process.php?edit=<?php echo $row['id']; ?>"
+							class="btn btn-danger">Delete</a>
+
+
+					</td>
 
 					</tr>
 
@@ -73,20 +100,39 @@
 		?>
 		<div class = "row justify-content-center">
 		<form action="process.php" method="POST">
+
+			<input type="hidden" name="id" value="<?php echo $id; ?>">
+			
 			<div class="form-group">
+
+
 			<label>Name</label>
-			<input type="text" name="name" class= "form-control" value="Enter name">
+			<input type="text" name="name" class= "form-control" value = "<?php echo $name; ?>" Placeholder="Enter name">
 			</div>
 			<div>
 			<label>Email</label>
-			<input type = "text" name = "email" class ="form-control " value="Enter your email">
+			<input type = "text" name = "email" class ="form-control " value = "<?php echo $email; ?>" Placeholder="Enter your email">
 			</div>
-			<div>
+			<div class="form-group">
+
+			<?php
+
+			if($update == true):
+
+			?>
+
+			<button type="submit" class="btn-info" name="update"> Update </button>
+
+			<?php else: ?>
+
+
 			<button type="submit" class="btn-primary" name="save"> Save </button>
+
+		<?php endif; ?>
 			</div>
 		</form>
 		</div>
-	   </div>
+	</div>
 
 	</body>
 
