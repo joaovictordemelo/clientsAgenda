@@ -35,7 +35,7 @@ p {
   text-align: center;
 
 }
-tr:hover {background-color: #778899;}
+tr:hover {background-color: skyblue;}
 
 
        </style>
@@ -79,7 +79,7 @@ tr:hover {background-color: #778899;}
 		</tr>
 
 		<?php
-			$conn = mysqli_connect("localhost", "root"," ", "clientsagenda");
+			$conn = mysqli_connect("localhost", "root","", "clientsagenda");
 			$sql = "SELECT * FROM clients";
 			$result = $conn->query($sql);
 			//$result = $conn->query($sql) or die($conn->error);
@@ -97,7 +97,7 @@ tr:hover {background-color: #778899;}
 		?>
 
 	</table>
-		<form action="index.php">
+		<form action="menu.php">
 			<button  type="submit" name = "submit"> Go back</button>
 		</form>
    </body>
