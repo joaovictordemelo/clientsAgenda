@@ -8,7 +8,41 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-	
+
+		<style>
+
+			table {
+  border-collapse: collapse;
+  width: 100%;
+  color:  #696969;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  color: white;
+  text-align: center;
+
+}
+tr:hover {background-color: skyblue;}
+
+
+       </style>
 
 	</head>
 
@@ -49,7 +83,7 @@
 
 					<thread>
 						<tr>
-							<th>Name</th>
+							<th >Name</th>
 							<th>Email</th>
 
 							
@@ -58,7 +92,7 @@
 							<th>phone</th>
 							<th>address</th>
 
-							<th colspan="6">Action</th>
+							<th colspan="6">Buttons</th>
 
 
 						</tr>
@@ -82,10 +116,10 @@
 					<td>
 											
 						<a href="edit.php?edit=<?php echo $row['id']; ?>"
-							class="btn btn-info">Edit</a>
+							class="btn btn-primary">Edit</a>
 
-						<a href="process.php?edit=<?php echo $row['id']; ?>"
-							class="btn btn-danger">Delete</a>
+						<a href="process.php?delete=<?php echo $row['id']; ?>"
+							class="btn btn-secondary">Delete</a>
 
 					</td>
 
@@ -151,8 +185,6 @@
 
 
 
-
-
 			<div class="form-group">
 
 			<?php
@@ -173,6 +205,12 @@
 		</form>
 		</div>
 	</div>
+
+
+	<form style="text-align: center; " action = "menu.php"> 
+	<button type="submit" name = "submit">Go Back to Menu </button>
+</form>
+
 
 	</body>
 
