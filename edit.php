@@ -8,6 +8,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+	
 
 	</head>
 
@@ -52,8 +53,12 @@
 							<th>Email</th>
 
 							
+							<th>job</th>
+							<th>market</th>
+							<th>phone</th>
+							<th>address</th>
 
-							<th colspan="2">Action</th>
+							<th colspan="6">Action</th>
 
 
 						</tr>
@@ -67,6 +72,12 @@
 					<tr>
 					<td><?php echo $row['name']; ?></td>
 					<td><?php echo $row['email']; ?></td>
+
+					<td><?php echo $row['job']; ?></td>
+					<td><?php echo $row['market']; ?></td>
+					<td><?php echo $row['phone']; ?></td>
+					<td><?php echo $row['address']; ?></td>
+
 
 					<td>
 											
@@ -115,6 +126,32 @@
 			<label>Email</label>
 			<input type = "text" name = "email" class ="form-control " value = "<?php echo $email; ?>" Placeholder="Enter your email">
 			</div>
+
+
+			<div>
+			<label>job</label>
+			<input type = "text" name = "job" class ="form-control " value = "<?php echo $job; ?>" Placeholder="Enter your email">
+			</div>
+
+			<div>
+			<label>market</label>
+			<input type = "text" name = "market" class ="form-control " value = "<?php echo $market; ?>" Placeholder="Enter your email">
+			</div>
+
+
+			<div>
+			<label>phone</label>
+			<input type = "text" name = "phone" class ="form-control " value = "<?php echo $phone; ?>" Placeholder="Enter your email">
+			</div>
+
+			<div>
+			<label>address</label>
+			<input type = "text" name = "address" class ="form-control " value = "<?php echo $address; ?>" Placeholder="Enter your email">
+			</div>
+
+
+
+
 
 			<div class="form-group">
 
