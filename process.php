@@ -9,14 +9,23 @@ $update=false;
 $name = '';
 $email = '';
 
+$job = '';
+$market = '';
+$phone='';
+$address='';
+
 
 if(isset($_POST['save'])){
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-	//add more columns here;
+	$job = $_POST['job'];
+	$market = $_POST['market'];
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
 
 
-	$mysqli->query("INSERT INTO clients (name, email) VALUES ('$name', '$email')") or
+
+	$mysqli->query("INSERT INTO clients (name, email, job, market,phone,address) VALUES ('$name', '$email', '$job', '$market', '$phone', '$address')") or
 		die($mysqli->error);
 
 		//above add more columns
@@ -54,6 +63,12 @@ if(isset($_GET['edit'])){
 		$row = $result->fetch_array();
 		$name = $row['name'];
 		$email = $row['email'];
+
+		$job = $row['job'];
+		$market = $row['market'];
+		$phone = $row['phone'];
+		$address = $row['address'];
+
 		//add more columns here
 
 
@@ -65,9 +80,13 @@ if(isset($_POST['update'])){
 	$id = $_POST['id'];
 	$name = $_POST['name'];
 	$email = $_POST['email'];
+	$job = $_POST['job'];
+	$market = $_POST['market'];
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
 	//add columns
 
-	$mysqli->query("UPDATE clients SET name='$name', email = '$email' WHERE id=$id") or die($mysqli->error);
+	$mysqli->query("UPDATE clients SET name='$name', email = '$email', job = '$job', market = '$market', phone='$phone', address='$address' WHERE id=$id") or die($mysqli->error);
 
 	$_SESSION['message'] = "Record updated Friend!";
 	$_SESSION['msg_type'] = "Warning";
